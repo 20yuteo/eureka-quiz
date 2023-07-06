@@ -1,15 +1,18 @@
-import { Container, Heading, Text, useBoolean } from "@chakra-ui/react";
-import { QuestionAnswerModal, QuestionAnswerModalButton } from "../components/QuestionAnswerModal";
+import { Button, Modal, ModalBody, Text, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Box } from "@chakra-ui/react"
 
-const Question = () => {
-    const [open, setOpen] = useBoolean();
-    return (
-        <>
-            <Container maxW='container.lg' marginTop="16px">
-                <Heading as='h1' size='4xl' marginBottom="16px">
-                    あああああああああ
-                    あああああああああ
-                </Heading>
+const QuestionAnswerModal = ({
+    isOpen,
+    onClose
+}: {
+    isOpen: boolean,
+    onClose: () => void
+}) => (
+    <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent margin="32px">
+            <ModalHeader>Modal Title</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
                 <Text>
                     これはテストです。これはテストです。これはテストです。これはテストです。これはテストです。
                     これはテストです。これはテストです。これはテストです。これはテストです。これはテストです。これはテストです。
@@ -21,12 +24,32 @@ const Question = () => {
                     これはテストです。これはテストです。これはテストです。これはテストです。これはテストです。
                     これはテストです。これはテストです。これはテストです。これはテストです。これはテストです。
                 </Text>
-                <QuestionAnswerModalButton onToggle={setOpen.toggle} />
-            </Container>
+            </ModalBody>
 
-            <QuestionAnswerModal isOpen={open} onClose={setOpen.off} />
-        </>
+            <ModalFooter>
+                <Button colorScheme='blue' mr={3} onClick={onClose}>
+                    Close
+                </Button>
+            </ModalFooter>
+        </ModalContent>
+    </Modal>
+)
+
+const QuestionAnswerModalButton = ({
+    onToggle
+}: {
+    onToggle: () => void
+}) => {
+    return (
+        <Box textAlign="center" margin="16px 0" onClick={onToggle}>
+            <Button>
+                回答と見る
+            </Button>
+        </Box>
     )
 }
 
-export default Question;
+export {
+    QuestionAnswerModal,
+    QuestionAnswerModalButton
+}
