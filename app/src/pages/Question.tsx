@@ -3,7 +3,7 @@ import { Container, Heading, Text } from "@chakra-ui/react";
 const Question = () => {
     return (
         <>
-            <Container maxW='container.lg'>
+            <Container maxW='container.lg' marginTop="16px">
                 <Heading as='h1' size='4xl' marginBottom="16px">
                     あああああああああ
                     あああああああああ

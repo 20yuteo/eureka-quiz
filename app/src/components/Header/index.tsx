@@ -9,7 +9,7 @@ const Header = () => {
             <Container maxW="container.lg">
                 <Flex as="header" py="4" justifyContent="space-between" alignItems="center">
                     <Heading as='h1' fontSize="2xl" cursor="pointer" color={useColorModeValue('black', 'white')}>
-                        うんちくエウレーカクイズ
+                        うんちくエウレーカクイズ🎉
                     </Heading>
                     <Button size='lg' onClick={toggleColorMode}>
                         {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
