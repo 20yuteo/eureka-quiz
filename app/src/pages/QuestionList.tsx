@@ -4,7 +4,7 @@ const QuestionList = () => (
     <>
         <VStack spacing='24px' maxW="735px" margin="auto" paddingTop="16px">
             <Container maxW='md' color='white'>
-                <Link textDecoration="none">
+                <Link textDecoration="none" href="/question/1">
                     <Flex direction="row" maxW="500">
                         <Card
                             overflow='hidden'
@@ -21,7 +21,7 @@ const QuestionList = () => (
                 </Link>
             </Container>
             <Container maxW='md' color='white'>
-                <Link textDecoration="none">
+                <Link textDecoration="none" href="/question/2">
                     <Flex direction="row" maxW="500">
                         <Card
                             overflow='hidden'
@@ -38,7 +38,7 @@ const QuestionList = () => (
                 </Link>
             </Container>
             <Container maxW='md' color='white'>
-                <Link textDecoration="none">
+                <Link textDecoration="none" href="/question/3">
                     <Flex direction="row" maxW="500">
                         <Card
                             overflow='hidden'
